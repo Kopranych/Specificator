@@ -1,0 +1,70 @@
+/*
+ * Create_spec.c
+ *
+ *  Created on: 7 мая 2016 г.
+ *      Author: Копраныч
+ */
+
+
+#include "Create_spec.h"
+
+int device_spec(char *name, char *number)
+{
+	FILE *sp;
+	int size_struct = atoi(number);
+	device specif[size_struct];
+	int i = 0;
+	const char *extention = ".txt";
+	if((sp=fopen(strcat(name,extention), "a+"))==NULL)
+	{
+		printf("ERROR\n");
+		exit(1);
+	}
+
+
+
+	while(i < size_struct)
+	{
+
+		scanf("%s %d", specif[i].element, &(specif[i].number));
+		specif[i].element[0] = 0;
+		specif[i].number = 1;
+
+		if(!(strcmp("commit_spec", specif[i].element)))
+		{
+			break;
+		}
+		else
+		{
+			fprintf(sp,"%s %d\n", specif[i].element, specif[i].number);
+		}
+		i++;
+	}
+
+
+
+	printf("spec was commited\n");
+	fclose(sp);
+	return 0;
+}
+
+
+int complect(char *name, char *number)
+{
+	FILE *sp;
+	int size_struct = atoi(number);
+	int i = 0;
+		if((sp=fopen(strcat(name,".txt"), "a+"))==NULL)
+		{
+			printf("ERROR\n");
+			exit(1);
+		}
+		device specif[size_struct];
+		while(fscanf(sp,"%s %d", specif[i].element, &(specif[i].number))!=EOF)
+		{
+			fprintf(stdout, "%s %d", specif[i].element, specif[i].number);
+			i++;
+		}
+		 fclose(sp);
+		 return 0;
+}

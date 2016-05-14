@@ -1,0 +1,63 @@
+/*
+ * Create_spec.c
+ *
+ *  Created on: 7 мая 2016 г.
+ *      Author: Копраныч
+ */
+
+#include "Create_spec.h"
+
+int device_spec(char *name, char *number)
+{
+	FILE *sp;// создаем указатель на структуру типа FILE
+	int size_struct = atoi(number);//сохраняем размер массива предварительно переведе его из типа char в тип int функцией atoi
+	device specif[size_struct];//создаем массив структур типа device с именем specif и размером size_struct
+	int i = 0;// обьявляем интовую переменную
+	const char *extention = ".txt";//сохраняем расширение будущего файла спецификации
+	char temp[strlen(name] = name;
+	if ((sp = fopen(strcat(temp, extention), "a+")) == NULL)//создаем/открывем фаил в режиме записи/чтения с именем и присваиваем ему расширение
+	{          //с помощью функции strcat(главное обеспечить расширению достаточно места)если фаил создался без ошибок то продолжаем,иначе
+		printf("ERROR\n");//иначе произошла ошибка
+		exit(1);//выходим
+	}
+
+	while (i < size_struct)// задаем предел создания элементов в спецификации
+	{
+
+		scanf("%s %d", specif[i].element, &(specif[i].number));//читаем вводимую инфу в элементы i-той структуры
+
+		if (!(strcmp("commit_spec", specif[i].element)))//проверяем если один из введенных значений "commit_spec"
+		{
+			break;// то заканчиваем ввод данных
+		}
+		else//иначе
+		{
+			fprintf(sp, "%s %d\n", specif[i].element, specif[i].number);//выводим данные в фаил
+		}
+		i++;//переходим к следующей i-той структуре
+	}
+
+	printf("spec was commited\n");//когда закончили вводить данные печатаем на экран "spec was commited"
+	fclose(sp);//закрываем поток файлов
+	return 0;//
+}
+
+int complect(char *name, char *number)
+{
+	FILE *sp;
+	int size_struct = atoi(number);
+	int i = 0;
+	if ((sp = fopen(strcat(name, ".txt"), "a+")) == NULL)
+	{
+		printf("ERROR\n");
+		exit(1);
+	}
+	device specif[size_struct];
+	while (fscanf(sp, "%s %d", specif[i].element, &(specif[i].number)) != EOF)
+	{
+		fprintf(stdout, "%s %d", specif[i].element, specif[i].number);
+		i++;
+	}
+	fclose(sp);
+	return 0;
+}

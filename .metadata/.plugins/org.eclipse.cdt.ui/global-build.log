@@ -1,0 +1,109 @@
+16:47:38 **** Incremental Build of configuration Debug for project Spec ****
+Info: Internal Builder is used for build
+gcc "-LC:\\practice\\eclips\\_Logger\\Debug" -o Spec.exe Create_spec.o executable.o -l_Logger.lib 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -l_Logger.lib
+collect2.exe: error: ld returned 1 exit status
+16:47:48 **** Incremental Build of configuration Debug for project Spec ****
+Info: Internal Builder is used for build
+gcc "-LC:\\practice\\eclips\\_Logger\\Debug" -o Spec.exe Create_spec.o executable.o -l_Logger.lib 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -l_Logger.lib
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for _Logger
+16:49:11 **** Clean-only build of configuration Debug for project Spec ****
+rm -rf executable.d Create_spec.d Create_spec.o executable.o Spec.exe 
+16:49:12 **** Clean-only build of configuration Debug for project _Logger ****
+rm -rf logger.o logger.d _Logger.lib 
+16:49:14 **** Rebuild of configuration Debug for project _Logger ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o logger.o "..\\logger.c" 
+ar -r _Logger.lib logger.o 
+ar: creating _Logger.lib
+16:49:15 **** Rebuild of configuration Debug for project Spec ****
+Info: Internal Builder is used for build
+gcc -std=c99 "-IC:\\practice\\eclips\\_Logger" -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -o executable.o "..\\executable.c" 
+In file included from ..\Create_spec.h:17:0,
+                 from ..\executable.c:10:
+C:\practice\eclips\_Logger/logger.h:24:13: warning: 'write_message' declared 'static' but never defined [-Wunused-function]
+ static void write_message(char* prefix, const char* message); //функция записывает в журнал принятые сообщения с префиксом типа сообщения и временем записи этого сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:25:13: warning: 'write_debug' declared 'static' but never defined [-Wunused-function]
+ static void write_debug(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:26:13: warning: 'write_info' declared 'static' but never defined [-Wunused-function]
+ static void write_info(const char* message); //и вызывает функцию записи в журнал
+             ^
+C:\practice\eclips\_Logger/logger.h:27:13: warning: 'write_warning' declared 'static' but never defined [-Wunused-function]
+ static void write_warning(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:28:13: warning: 'write_error' declared 'static' but never defined [-Wunused-function]
+ static void write_error(const char* message); //и вызывает функцию записи в журнал
+             ^
+gcc -std=c99 "-IC:\\practice\\eclips\\_Logger" -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -o Create_spec.o "..\\Create_spec.c" 
+In file included from ..\Create_spec.h:17:0,
+                 from ..\Create_spec.c:8:
+C:\practice\eclips\_Logger/logger.h:24:13: warning: 'write_message' declared 'static' but never defined [-Wunused-function]
+ static void write_message(char* prefix, const char* message); //функция записывает в журнал принятые сообщения с префиксом типа сообщения и временем записи этого сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:25:13: warning: 'write_debug' declared 'static' but never defined [-Wunused-function]
+ static void write_debug(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:26:13: warning: 'write_info' declared 'static' but never defined [-Wunused-function]
+ static void write_info(const char* message); //и вызывает функцию записи в журнал
+             ^
+C:\practice\eclips\_Logger/logger.h:27:13: warning: 'write_warning' declared 'static' but never defined [-Wunused-function]
+ static void write_warning(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:28:13: warning: 'write_error' declared 'static' but never defined [-Wunused-function]
+ static void write_error(const char* message); //и вызывает функцию записи в журнал
+             ^
+gcc "-LC:\\practice\\eclips\\_Logger\\Debug" -o Spec.exe Create_spec.o executable.o -l_Logger.lib 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -l_Logger.lib
+collect2.exe: error: ld returned 1 exit status
+16:52:06 **** Clean-only build of configuration Debug for project Spec ****
+rm -rf executable.d Create_spec.d Create_spec.o executable.o Spec.exe 
+16:52:08 **** Clean-only build of configuration Debug for project _Logger ****
+rm -rf logger.o logger.d _Logger.lib 
+16:52:11 **** Rebuild of configuration Debug for project _Logger ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o logger.o "..\\logger.c" 
+ar -r _Logger.lib logger.o 
+ar: creating _Logger.lib
+16:52:11 **** Rebuild of configuration Debug for project Spec ****
+Info: Internal Builder is used for build
+gcc -std=c99 "-IC:\\practice\\eclips\\_Logger" -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -o executable.o "..\\executable.c" 
+In file included from ..\Create_spec.h:17:0,
+                 from ..\executable.c:10:
+C:\practice\eclips\_Logger/logger.h:24:13: warning: 'write_message' declared 'static' but never defined [-Wunused-function]
+ static void write_message(char* prefix, const char* message); //функция записывает в журнал принятые сообщения с префиксом типа сообщения и временем записи этого сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:25:13: warning: 'write_debug' declared 'static' but never defined [-Wunused-function]
+ static void write_debug(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:26:13: warning: 'write_info' declared 'static' but never defined [-Wunused-function]
+ static void write_info(const char* message); //и вызывает функцию записи в журнал
+             ^
+C:\practice\eclips\_Logger/logger.h:27:13: warning: 'write_warning' declared 'static' but never defined [-Wunused-function]
+ static void write_warning(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:28:13: warning: 'write_error' declared 'static' but never defined [-Wunused-function]
+ static void write_error(const char* message); //и вызывает функцию записи в журнал
+             ^
+gcc -std=c99 "-IC:\\practice\\eclips\\_Logger" -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -o Create_spec.o "..\\Create_spec.c" 
+In file included from ..\Create_spec.h:17:0,
+                 from ..\Create_spec.c:8:
+C:\practice\eclips\_Logger/logger.h:24:13: warning: 'write_message' declared 'static' but never defined [-Wunused-function]
+ static void write_message(char* prefix, const char* message); //функция записывает в журнал принятые сообщения с префиксом типа сообщения и временем записи этого сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:25:13: warning: 'write_debug' declared 'static' but never defined [-Wunused-function]
+ static void write_debug(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:26:13: warning: 'write_info' declared 'static' but never defined [-Wunused-function]
+ static void write_info(const char* message); //и вызывает функцию записи в журнал
+             ^
+C:\practice\eclips\_Logger/logger.h:27:13: warning: 'write_warning' declared 'static' but never defined [-Wunused-function]
+ static void write_warning(const char* message); //Добовляет к принятому сообщению префикс(debug, info, warning, error) какого типа это сообщения
+             ^
+C:\practice\eclips\_Logger/logger.h:28:13: warning: 'write_error' declared 'static' but never defined [-Wunused-function]
+ static void write_error(const char* message); //и вызывает функцию записи в журнал
+             ^
+gcc "-LC:\\practice\\eclips\\_Logger\\Debug" -o Spec.exe Create_spec.o executable.o -l_Logger 

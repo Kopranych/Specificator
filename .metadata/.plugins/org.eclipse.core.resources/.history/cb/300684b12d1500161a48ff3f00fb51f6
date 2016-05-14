@@ -1,0 +1,61 @@
+/*
+ * executable.c
+ *
+ *  Created on: 7 мая 2016 г.
+ *      Author: Копраныч
+ */
+
+#include "Create_spec.h"
+#define INPUT_ARRAY_LEN 40
+
+char* copy_str(const char* source_str)
+{
+	void* buffer = malloc(strlen(source_str));
+    strcpy((char*)buffer, source_str);
+    return (char*)buffer;
+}
+
+int main(int argc, char* argv[])
+{
+//	char t1[10];
+//	char t2[10];
+//
+//	char *result = gets(t1);
+//	gets(t1);
+
+	char *command, *name, *numeral, arr[INPUT_ARRAY_LEN];
+	for (;;)
+	{
+		printf("enter your command!\n");
+		char* result = copy_str(gets(arr));
+//		command = strtok(result, " ");
+//
+//		name = strtok('\0', " ");
+//
+//		numeral = strtok('\0', " ");
+
+				command = "Create";
+
+				name = "D1         ";
+
+				numeral = "1";
+
+		if (!strcmp("Create", command))
+		{
+			printf("spec %s was create\n", name);
+			device_spec(name, numeral);
+		}
+		else if (!strcmp("Complect", command))
+		{
+			printf("Enter name your spec\n");
+			scanf("%s", name);
+			complect(name, numeral);
+		}
+		else
+		{
+			printf("Enter the correct name order\n");
+		}
+
+		printf("done\n");
+	}
+}

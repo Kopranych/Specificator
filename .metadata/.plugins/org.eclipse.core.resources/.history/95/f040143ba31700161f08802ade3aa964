@@ -1,0 +1,40 @@
+/*
+ * executable.c
+ *
+ *  Created on: 7 мая 2016 г.
+ *      Author: Копраныч
+ */
+
+#include "Create_spec.h"
+#define INPUT_ARRAY_LEN 40
+
+int main(int argc, char* argv[])
+{
+
+	char command[INPUT_ARRAY_LEN], name[INPUT_ARRAY_LEN],
+			numeral[INPUT_ARRAY_LEN];
+	for (;;)
+	{
+		printf("Enter command!\n");
+
+		scanf("%s %s %s", command, name, numeral);
+
+		if (!strcmp("Create", command))
+		{
+			printf("spec %s was create\n", name);
+			printf("Enter the elements and their quantity \n");
+			device_spec(name, numeral);
+		}
+		else if (!strcmp("Complect", command))
+		{
+			printf("Your spec %s\n", name);
+			complect(name, numeral);
+		}
+		else
+		{
+			printf("Enter the correct name order\n");
+		}
+
+		printf("Done\n");
+	}
+}
