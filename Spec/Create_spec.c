@@ -10,17 +10,9 @@
 #define INPUT_ARRAY_LEN 40
 #define TYPE_INT 4
 #define SIZE_ELEMENT 20
-#define DEBUG
-
 
 int device_spec(char *name, int number)
 {
-#ifdef DEBUG
-
-	printf("debug mode");
-
-#endif
-
 	Log *logger = get_logger("Logger_spec");
 	FILE *sp; // создаем указатель на структуру типа FILE
 	assert(strlen(name) < INPUT_ARRAY_LEN);
