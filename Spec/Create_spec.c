@@ -13,7 +13,7 @@
 
 int device_spec(char *name, int number)
 {
-	Log *logger = get_logger("Logger_spec");
+	Log *logger = get_logger("Logger_spec.txt");
 	FILE *sp; // создаем указатель на структуру типа FILE
 	assert(strlen(name) < INPUT_ARRAY_LEN);
 	int check_size = sizeof(number);
@@ -59,7 +59,7 @@ int device_spec(char *name, int number)
 
 int complect(char *name, int number)
 {
-	Log *logger = get_logger("Logger_spec");
+	Log *logger = get_logger("Logger_spec.txt");
 	FILE *sp;
 	int i = 0;
 	const char *extention = ".txt"; //сохраняем расширение будущего файла спецификации

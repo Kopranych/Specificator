@@ -59,8 +59,8 @@ static void write_message(char* prefix, const char* message)
 	FILE* ptr; //создаем указатель на структуру типа фаил
 	time_t lt; //обьявляем переменную типа lt для функции ctime
 	lt = time(NULL); //присваиваем lt значентие времени в системе
-	const char *postfix = ".txt";//задаем расширение файла журнала
-	if ((ptr = fopen(strcat(file_name, postfix), "a+")) == NULL) //открываем журнал и проверяем правильность его открытия
+//	const char *postfix = ".txt";//задаем расширение файла журнала
+	if ((ptr = fopen(file_name, "a+")) == NULL) //открываем журнал и проверяем правильность его открытия
 	{
 		printf("Error\n"); //если ошибка
 		exit(1); //выходим
