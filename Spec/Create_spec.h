@@ -25,8 +25,6 @@ typedef struct
 int device_spec(char *name, int number);//функция которая создает в файле на диске спецификацию для внесения в нее элементов
 int complect(char *name, int number); //функция отображающая данные спецификации хранящиеся в файле
 
-
-
 #endif /* CREATE_SPEC_H_ */
 
 
