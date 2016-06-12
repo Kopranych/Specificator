@@ -1,2 +1,0 @@
-resistor 5
-capasitor 6

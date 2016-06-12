@@ -33,8 +33,8 @@ int device_spec(char *name, int number)
 	{
 
 		scanf("%s %d", specif[i].element, &(specif[i].number)); //ввод элементов i-той структуры
-		logger->info("Enter elements\n");
 		assert(strlen(specif[i].element) < SIZE_ELEMENT);
+		logger->info("Enter elements\n");
 		int check_size = sizeof(specif[i].number);
 		assert(check_size == TYPE_INT);
 

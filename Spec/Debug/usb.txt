@@ -1,3 +1,0 @@
-resistors 2
-capasitor 1
-diod 3

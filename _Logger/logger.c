@@ -16,7 +16,7 @@ Log* get_logger(char* name)
 {
 	file_name = name; //сохран€ем им€ файла-журнала
 	static _Bool is_init; //обь€вл€ем статическую Ѕулеву переменную is_init
-	Log* logger; //обь€вл€ем указатель на структуру типа Log
+	static Log* logger; //обь€вл€ем указатель на структуру типа Log
 	if (!is_init) //если журнал открыт впервые т.е. is_init не проинициализирована равна нулю
 	{ //то инициализируем нашу структуру присваива€ функции записи сообщений указателем
 		logger = malloc(sizeof(Log)); //выдел€ем в куче пам€ть дл€ структуры
@@ -66,7 +66,8 @@ static void write_message(char* prefix, const char* message)
 		exit(1); //выходим
 	}
 	fprintf(ptr, "%s %s\n", ctime(&lt), strcat(prefix, message)); //записываем в фаил журнал врем€ событи€ его тип(prefix) и само событие
-	printf("%s %s\n", ctime(&lt), strcat(prefix, message)); //плюс выводим это сообщениена экран консоли
+
 	fclose(ptr); //закрываем поток файла
+// коментирую т.к. при вклю€енном printf пишет в файл	printf("%s %s\n", ctime(&lt), strcat(prefix, message)); //плюс выводим это сообщениена экран консоли
 }
 

@@ -1,8 +1,8 @@
-16:52:11 **** Rebuild of configuration Debug for project _Logger ****
+13:38:29 **** Rebuild of configuration Debug for project _Logger ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o logger.o "..\\logger.c" 
 ar -r _Logger.lib logger.o 
 ar: creating _Logger.lib
 
-16:52:11 Build Finished (took 520ms)
+13:38:29 Build Finished (took 271ms)
 

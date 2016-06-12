@@ -15,11 +15,12 @@
 
 int main(int argc, char* argv[])
 {
-	Log *logger = get_logger("Logger_spec");//создаем журнал инициализируем его и даем ему имя
+	Log *logger = get_logger("Logger_spec.txt");//создаем журнал инициализируем его и даем ему имя
 	logger->info("getting started program\n");//первая запись в журнал: программа стартовала
 	char command[INPUT_ARRAY_LEN], name[INPUT_ARRAY_LEN];//массивы для ввода комманд и имени спецификаций
 	int numeral;//количество элементов в спецификации
-
+	char p[] = "rtt";
+	int i = strlen(p);
 	for (;;)//бесконечный цикл
 	{
 		printf("Enter command!\n");//
